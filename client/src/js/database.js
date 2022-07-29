@@ -21,7 +21,7 @@ export const putDb = async (content) => {
   const request = store.put({jate: content});
   const result = await request;
   console.log("Stored to the JATE database", result);
-}
+};
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {

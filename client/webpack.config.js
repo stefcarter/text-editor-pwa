@@ -27,9 +27,11 @@ module.exports = () => {
         swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'JATE',
-        description: 'Edit text in your browser',
+        description: 'Text editor...in your browser!',
         background_color: '#225ca3',
         theme_color: '#225ca3',
         start_url: '/',
@@ -39,10 +41,10 @@ module.exports = () => {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
-          }
-        ]
-
+          },
+        ],
       })
+      
     ],
 
     module: {
@@ -52,7 +54,7 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.m?js$/,
+          test: /\m?js$/i,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
