@@ -37,3 +37,4 @@ THEN I should have proper build scripts for a webpack application
 ![screenshot of the site](./client/src/images/snapshot.jpg)
 
 ## Deployed on Heroku
+https://text-pwa-editor.herokuapp.com/
